@@ -1,0 +1,27 @@
+curl -XGET "http://localhost:8080/users" 
+
+curl -XPOST -d '{"name":"Alice"}' "http://localhost:8080/users" 
+
+curl -XGET "http://localhost:8080/users/11231244213/relationships" 
+
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/112312/relationships/213412"  
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/213412/relationships/112312"  
+
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/11/relationships/21"  
+curl -XPUT -d '{"state":"disliked"}' "http://localhost:8080/users/21/relationships/11"  
+
+curl -XPUT -d '{"state":"disliked"}' "http://localhost:8080/users/33/relationships/44"  
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/44/relationships/33"  
+
+curl -XPUT -d '{"state":"disliked"}' "http://localhost:8080/users/55/relationships/66"  
+curl -XPUT -d '{"state":"disliked"}' "http://localhost:8080/users/66/relationships/55"  
+
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/77/relationships/88"  
+curl -XPUT -d '{"state":"liked"}' "http://localhost:8080/users/88/relationships/77"  
+
+curl -XGET "http://localhost:8080/users/11/relationships" 
+curl -XGET "http://localhost:8080/users/21/relationships" 
+curl -XGET "http://localhost:8080/users/33/relationships" 
+curl -XGET "http://localhost:8080/users/44/relationships" 
+curl -XGET "http://localhost:8080/users/55/relationships" 
+curl -XGET "http://localhost:8080/users/66/relationships" 
